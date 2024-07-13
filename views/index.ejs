@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
+    <title>TFE home</title>
+</head>
+<body>
+    <div class="main">
+        <div class="mainHeader">
+            <input placeholder="Search" class="Search" id="searchInput">
+            <button onclick="searchByname()">Search</button>
+            
+            <button class="button1"><a href="/create" class="">Create New File</a></button>
+        </div>
+                <table class="filesTable">
+                    <tr>
+                        <th>File Name</th>
+                        <th>Tools</th>
+                        <th>Creation Date / Last edit</th>
+                    </tr>
+
+                    <% results.forEach((file)=>{ %>
+                        <tr>
+                            <td>
+                                <a href="detail?filePath=<%= file[1] %>"><%= file[0] %></a>
+                            </td>
+                            <td>
+                                <div class="sa">
+                                <img class="icon" onclick='deleteFile(<%-JSON.stringify(file[1])%>) 'src="/public/assets/svgs/delete.svg"> 
+                                <a href="/modify?filePath=<%= file[1] %>"><img class="icon" src="/public/assets/svgs/edit.svg"></a>
+                                <a href="/downFile?filePath=<%= file[1] %>" download="<%= file[0] %>"><img class="icon" src="/public/assets/svgs/download.svg"></a>
+                                <a href="/downFile?filePath=<%= file[1] %>&compress=1" download="<%= file[0] %>"><img class="icon" src="/public/assets/svgs/compressed.svg"></a>
+                            </div>
+                            </td>
+                            <td>
+                                <div class="sa">
+                                <span><%= file[3] %></span>
+                                <span><%= file[2] %></span>
+                            </div>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </table>
+                
+        
+    </div>
+    <script src="/public/script.js"></script>
+</body>
+</html>
+

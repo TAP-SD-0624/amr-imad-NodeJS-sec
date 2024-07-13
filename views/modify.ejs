@@ -1,0 +1,31 @@
+<html>
+<head>
+<link href="public/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="fileEditor">
+            <h2 class="modifyingWarning">Please note that you are Modifying an existing file submiting will <span class="danger">Overwrite</span>.</h2>
+
+       
+            <form class="editor" onsubmit="updateFile(this)">
+                <div class="editorInputSet">
+                    <span>Name :</span><input  value="<%=fileName%>" required disabled>
+                    <span>Extension :</span><input  value="<%=fileExt%>" required disabled>
+                    <span>New Name :</span><input placeholder="New Name" value="<%=fileName%>" required>
+                    <span>Editor name :</span><input placeholder="New Name" value="<%=fileName%>" required>
+
+
+                </div>
+                    <textarea class="textEditor" id="textEditor" required><%=data%></textarea>
+            
+           <div class="editorButtons">
+               <input type="file" id="myFile" name="filename" onchange="updateEditor(this)" style="display: none;">
+               <button class="clearEditor" type="button"><label for="myFile">Uplaod</label></button>
+               <button class="cancelEditor">Cancel</button>
+               <button class="submitEditor" type="submit">Submit</button>
+           </div>
+           <h1 id="statusUpdate"></h1>
+        </form>
+   </div>
+   <script src="public/script.js"></script>
+</body>

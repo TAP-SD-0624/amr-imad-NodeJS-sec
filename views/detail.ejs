@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
+    <title>TFE home</title>
+</head>
+<body>
+<div class="main">
+    <div class="mainReader">
+        <div class="mainReaderControl">
+            <div>
+                <h3>file name is : (<%=fileName%>) file type is (<%=fileExt%>) </h3>
+            </div>
+            <a href="/modify?filePath=<%= filePath %>"><img class="icon" src="/public/assets/svgs/edit.svg"></a>
+            <a href="/downFile?filePath=<%= filePath %>" download="<%= fileBase %>"><img class="icon" src="/public/assets/svgs/download.svg"></a>
+        </div>
+    <p class="mainReaderText"><% newdata.forEach((i)=>{ %>
+        <%=i%>
+            <br>
+        <% }) %>
+    </p>
+</div>
+</div>
+<script src="/public/script.js"></script>
+</body>
+</html>
+
+

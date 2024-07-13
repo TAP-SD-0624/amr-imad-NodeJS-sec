@@ -1,0 +1,32 @@
+<html>
+<head>
+<link href="public/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="fileEditor">
+
+       
+            <form class="editor" onsubmit="createFile(this)">
+                <div class="editorInputSet">
+                    <span>Name :</span><input placeholder="File Name" required>
+                    <span>Author Name :</span><input placeholder="Author Name" required>
+                    <span>File Type :</span>
+                    <select>
+                        <option value=".txt">text</option>
+                        <option value=".json">Json</option>
+                    </select>
+                </div>
+                    <textarea class="textEditor" id="textEditor" required></textarea>
+            
+           <div class="editorButtons">
+               <input type="file" id="myFile" name="filename" onchange="updateEditor(this)" style="display: none;">
+               <button class="clearEditor" type="button"><label for="myFile">Uplaod</label></button>
+               <button class="clearEditor" type="reset">Clear</button>
+               <button class="cancelEditor">Cancel</button>
+               <button class="submitEditor" type="submit">Submit</button>
+           </div>
+           <h1 id="statusUpdate"></h1>
+        </form>
+   </div>
+   <script src="public/script.js"></script>
+</body>

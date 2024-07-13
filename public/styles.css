@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+}
+.mainReader{
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 2px gray;
+}
+.mainHeader{
+    display: flex;
+    gap: 20px;
+    height: 30px;
+}
+.mainReaderControl{
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 2px gray;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainReaderText{
+  padding: 20px;
+}
+.Search{
+    width: 300px;
+}
+button{
+    width: 200px;
+}
+.filesTable {
+    margin-top: 20px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .icon{
+    cursor: pointer;
+    width: 20px;
+  }
+  .modifyingWarning{
+    margin-bottom: 20px;
+  }
+  .danger{
+    color: red;
+  }
+
+
+  .fileEditor{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+  }
+  .editor{
+    display: flex;
+    flex-direction: column;
+  }
+  .editorInputSet{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .textEditor{
+    padding: 10px;
+    height: 500px;
+    resize: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .editorButtons{
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    height: 25px;
+  }
+
+  .sa{
+    display: flex;
+    justify-content: space-around;
+  }
